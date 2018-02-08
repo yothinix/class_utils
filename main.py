@@ -10,7 +10,7 @@ class Banana(object):
     apple = Apple()
 
 
-def get_in_class(obj, keys):
+def get_in_class(obj, keys = []):
     new_key = keys[:]
     if hasattr(obj, keys[0]):
         new_key.remove(keys[0])
