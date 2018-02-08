@@ -1,6 +1,3 @@
-import copy
-
-
 class Orange(object):
     mango = 'This is mango'
 
@@ -14,7 +11,7 @@ class Banana(object):
 
 
 def get_in_class(obj, keys):
-    new_key = copy.copy(keys)
+    new_key = keys[:]
     for key in keys:
         if hasattr(obj, key):
             new_key.remove(key)
