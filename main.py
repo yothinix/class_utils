@@ -19,10 +19,9 @@ def get_in_class(obj, keys):
         if hasattr(obj, key):
             new_key.remove(key)
             new_obj = getattr(obj, key)
-            if not new_key:
-                return new_obj
-            else:
+            if new_key:
                 return get_in_class(new_obj, new_key)
+            return new_obj
 
 
 b = Banana()
